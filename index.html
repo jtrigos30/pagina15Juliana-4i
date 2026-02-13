@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis 15 Años - Invitación Real</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Great+Vibes&family=Montserrat:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  </head>
+  <body>
+    <canvas id="lienzo-magico"></canvas>
+    <canvas id="canvas-pixie"></canvas>
+
+    <div id="intro-screen">
+      <div class="book-container">
+        <div class="book-levitation-wrap">
+          <div class="book">
+            <div class="page page4">
+              <div class="music-container">
+                <h3 class="music-title">
+                  Así suena<br /><span>mi historia</span>
+                </h3>
+                <div class="playlist-scroll">
+                  <ul class="playlist">
+                    <li><strong>Coldplay</strong> <span>Yellow</span></li>
+                    <li>
+                      <strong>Guns N' Roses</strong>
+                      <span>Sweet Child O' Mine</span>
+                    </li>
+                    <li><strong>Goo Goo Dolls</strong> <span>Iris</span></li>
+                    <li>
+                      <strong>The Fureys</strong>
+                      <span>When You Were Sweet Sixteen</span>
+                    </li>
+                    <li><strong>Howie Day</strong> <span>Collide</span></li>
+                    <li>
+                      <strong>Declan O'Rourke</strong>
+                      <span>Whatever Else Happens</span>
+                    </li>
+                    <li>
+                      <strong>The Offspring</strong> <span>Want You Bad</span>
+                    </li>
+                    <li>
+                      <strong>Busted</strong> <span>Fall At Your Feet</span>
+                    </li>
+                    <li><strong>Aerosmith</strong> <span>Crazy</span></li>
+                    <li>
+                      <strong>Counting Crows</strong> <span>Colorblind</span>
+                    </li>
+                    <li>
+                      <strong>David Gray</strong> <span>This Year's Love</span>
+                    </li>
+                    <li>
+                      <strong>Bon Jovi</strong> <span>In These Arms</span>
+                    </li>
+                    <li>
+                      <strong>Westlife</strong> <span>World of Our Own</span>
+                    </li>
+                    <li>
+                      <strong>Eagle-Eye Cherry</strong>
+                      <span>Save Tonight</span>
+                    </li>
+                    <li>
+                      <strong>Metallica</strong> <span>Tuesday's Gone</span>
+                    </li>
+                    <li><strong>Snow Patrol</strong> <span>Run</span></li>
+                    <li><strong>The Verve</strong> <span>Lucky Man</span></li>
+                    <li><strong>HIM</strong> <span>Wicked Game</span></li>
+                    <li>
+                      <strong>The La's</strong> <span>There She Goes</span>
+                    </li>
+                    <li>
+                      <strong>Maroon 5</strong> <span>She Will Be Loved</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="page page3">
+              <p>hola</p>
+            </div>
+
+            <div class="page page2">
+              <div class="page-face page2-front hoja-imagen"></div>
+              <div class="page-face page2-back paper-style"></div>
+            </div>
+
+            <div class="page page1">
+              <div class="page-face page1-front paper-style"></div>
+              <div class="page-face page1-back paper-style"></div>
+            </div>
+
+            <div class="cover front">
+              <div class="front-face"></div>
+              <div class="back-face"></div>
+            </div>
+
+            <div class="cover back"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <p class="texto-asistentes">Confirma el Numero de Asistentes</p>
+
+        <div class="slider-wrapper">
+          <input type="radio" name="asistencia" id="opt-1" value="1" />
+          <input type="radio" name="asistencia" id="opt-2" value="2" />
+          <input type="radio" name="asistencia" id="opt-3" value="3" />
+          <input type="radio" name="asistencia" id="opt-4" value="4" />
+
+          <label for="opt-1" class="slider-option">1</label>
+          <label for="opt-2" class="slider-option">2</label>
+          <label for="opt-3" class="slider-option">3</label>
+          <label for="opt-4" class="slider-option">4</label>
+
+          <div class="slider-highlight"></div>
+        </div>
+      </div>
+    </div>
+
+    <main id="contenido-principal" class="oculto">
+      <div class="container-rain">
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="rain">
+          <div class="drop"></div>
+          <div class="waves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="splash"></div>
+          <div class="particles">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <section class="hero">
+        <svg
+          class="corona-royal"
+          viewBox="0 0 1045 530"
+          preserveAspectRatio="xMidYMid meet"
+        >
+                         
+          <g transform="translate(-18.017645,-72.797208)">
+                               
+            <path
+              class="trazo-corona"
+              d="m 1033.32,597.3863 c -4.122,-2.51349 -7.0968,-6.84158 -8.2596,-12.01675 C 1018.347,555.4907 876.09983,524.05749 698.93143,513.3029 406.23609,495.53551 86.291165,530.80284 53.116657,584.49066 c -7.427892,12.0209 -25.518723,11.08366 -31.28889,-1.62099 -11.153723,-24.55808 29.051656,-51.94641 105.103663,-71.59775 6.875,-1.77646 13.175,-3.44698 14,-3.71227 0.84128,-0.27053 -0.79517,-1.24849 -3.72641,-2.22697 -49.935338,-16.66882 -49.759823,-106.60895 0.2705,-138.61296 49.84232,-31.88375 105.43939,37.74433 63.95591,80.09643 -25.46874,26.00202 -69.52707,5.14612 -58.02105,-27.46542 5.45809,-15.46988 26.91154,-22.30494 30.10262,-9.59068 1.28015,5.10052 -0.29986,7.81506 -8.68734,14.92525 -6.8673,5.82152 2.49138,15.04828 12.66504,12.48653 21.83857,-5.49902 22.89713,-40.15236 1.60766,-52.62882 -39.77846,-23.31173 -79.626428,56.13415 -46.52999,92.76796 9.97847,11.04497 38.66245,16.13058 59.54544,10.55727 24.34098,-6.49619 46.66465,-16.74969 94.06514,-43.20513 20.05284,-11.19201 31.17423,-16.8477 39.25248,-19.96153 3.3,-1.27202 5.03574,-2.33475 3.8572,-2.36163 -8.13168,-0.18549 -45.17613,-10.23099 -64.54471,-17.50287 -69.27716,-26.00991 -93.77029,-49.65831 -93.78035,-90.54601 -0.0142,-57.62772 77.45596,-65.67471 87.16532,-9.05405 6.77453,39.50598 -50.69099,52.36065 -63.902,14.29447 -2.33929,-6.74042 -2.33929,-6.74042 -1.90566,0.75958 2.40809,41.64908 97.96218,84.83265 191.6102,86.594 19.9367,0.37498 21.70723,0.55742 24.35004,2.50909 1.90579,1.4074 4.88758,2.25994 9,2.57326 6.14996,0.46854 6.14996,0.46854 -2.35004,-4.21652 -18.74668,-10.33286 -86.09903,-51.09354 -98,-59.30819 -48.61348,-33.5555 -69.21871,-64.06815 -67.83529,-100.45188 2.08814,-54.9179 90.33615,-53.21847 93.58723,1.80225 1.7291,29.26289 -25.34403,45.43814 -52.75194,31.51743 -17.31207,-8.79294 -21.56013,-23.17533 -12.33726,-41.76944 2.25065,-4.5375 3.86286,-8.25 3.58271,-8.25 -5.42744,0 -11.6424,10.4604 -11.5578,19.45291 0.28195,29.97041 23.98755,58.75571 73.6135,89.38761 76.48099,47.20832 104.20997,62.69165 95.04359,53.0705 -13.27143,-13.92985 -33.00731,-36.61136 -37.3382,-42.91102 -1.3234,-1.925 -2.92715,-3.82398 -3.5639,-4.21996 -0.63674,-0.39598 -2.90179,-3.32098 -5.03343,-6.5 -2.13165,-3.17902 -4.65752,-6.57274 -5.61305,-7.54159 -1.65834,-1.68146 -4.2403,-5.28613 -15.16036,-21.16528 -37.92294,-55.14484 -35.41167,-114.11567 5.76244,-135.31667 22.39163,-11.52969 58.35129,7.17368 65.83755,34.2435 1.38277,5 1.38277,5 2.07451,-5.18894 11.75009,-173.07323 179.62931,-173.07323 191.3794,0 0.69174,10.18894 0.69174,10.18894 2.07451,5.18894 7.48626,-27.06982 43.44592,-45.77319 65.83755,-34.2435 30.80465,15.86165 41.0066,54.33461 25.78626,97.2435 -2.67912,7.55292 -14.52628,30.07902 -20.02382,38.07317 -10.92006,15.87915 -13.50202,19.48382 -15.16036,21.16528 -0.95553,0.96885 -3.4814,4.36257 -5.61305,7.54159 -2.13164,3.17902 -4.39669,6.10402 -5.03343,6.5 -0.63675,0.39598 -2.2405,2.29496 -3.5639,4.21996 -4.33089,6.29966 -24.06677,28.98117 -37.3382,42.91102 -9.16638,9.62115 18.5626,-5.86218 95.04359,-53.0705 49.62595,-30.6319 73.33155,-59.4172 73.6135,-89.38761 0.0846,-8.99251 -6.13036,-19.45291 -11.5578,-19.45291 -0.28015,0 1.33206,3.7125 3.58271,8.25 9.22287,18.59411 4.97481,32.9765 -12.33726,41.76944 -27.40791,13.92071 -54.48104,-2.25454 -52.75194,-31.51743 3.25108,-55.02072 91.49909,-56.72015 93.58723,-1.80225 1.38342,36.38373 -19.22181,66.89638 -67.83529,100.45188 -11.90097,8.21465 -79.25332,48.97533 -98,59.30819 -8.5,4.68506 -8.5,4.68506 -2.35004,4.21652 4.11242,-0.31332 7.09421,-1.16586 9,-2.57326 2.64281,-1.95167 4.41334,-2.13411 24.35004,-2.50909 93.64802,-1.76135 189.20211,-44.94492 191.6102,-86.594 0.43363,-7.5 0.43363,-7.5 -1.90566,-0.75958 -13.21101,38.06618 -70.67653,25.21151 -63.902,-14.29447 7.86103,-45.84204 75.24572,-52.02487 85.65618,-7.85932 13.08295,55.50343 -36.34216,98.13454 -141.31592,121.89058 -7.34647,1.66253 -14.32147,3.04479 -15.5,3.07167 -1.17854,0.0269 0.5572,1.08961 3.8572,2.36163 8.07825,3.11383 19.19964,8.76952 39.25248,19.96153 80.3976,44.87199 114.18542,54.17512 143.88991,39.61863 36.10364,-17.69236 23.80663,-94.79104 -16.5657,-103.8621 -32.55265,-7.3141 -50.92088,48.62275 -18.63596,56.75219 10.17366,2.56175 19.53234,-6.66501 12.66504,-12.48653 -8.38748,-7.11019 -9.96749,-9.82473 -8.68734,-14.92525 3.19108,-12.71426 24.64453,-5.8792 30.10262,9.59068 11.50602,32.61154 -32.55231,53.46744 -58.02105,27.46542 -41.48339,-42.352 14.1137,-111.98011 63.95591,-80.09643 50.80437,32.49914 49.90887,124.0754 -1.3608,139.16638 -5.59511,1.6469 -5.59511,1.6469 7.40489,4.88929 69.85337,17.42248 104.46047,38.19203 109.53677,65.73895 3.0343,16.46565 -13.1221,29.11996 -26.6482,20.87196 z M 278.43143,485.86069 c 45.57066,-4.93656 90.85366,-8.29617 141.5,-10.49808 39.06145,-1.69825 49.01783,-2.0372 60.35699,-2.05474 12.65842,-0.0196 12.31958,0.96713 4.11321,-11.9779 -19.96823,-31.49862 -103.13099,-38.97805 -157.79406,-14.19157 -3.75312,1.70182 -18.15312,9.35246 -32,17.00141 -13.84688,7.64896 -29.90114,16.46729 -35.67614,19.59629 -8.0423,4.35747 -9.68077,5.56352 -7,5.15261 1.925,-0.29507 13.85,-1.65768 26.5,-3.02802 z m 544.5,-2.21193 c -5.775,-3.08096 -21.82926,-11.85999 -35.67614,-19.50895 -47.63648,-26.31419 -64.49222,-31.32128 -105.32386,-31.28703 -45.55732,0.0382 -64.94526,6.8113 -77.12031,26.94164 -7.86053,12.99665 -7.86053,12.99665 10.37989,13.72306 89.83975,3.5778 140.31824,7.04287 192.89149,13.24093 27.73858,3.27021 27.06992,3.41024 14.84893,-3.10965 z M 469.53067,388.7094 c -6.76437,-16.69857 -13.47603,-44.12215 -17.0432,-69.63793 -1.7786,-12.72217 -7.55604,-74.01502 -7.55604,-80.16197 0,-5.91762 -0.92854,-6.29554 -3.2945,-1.34086 -12.45708,26.08693 -55.57368,23.62424 -63.02218,-3.59964 -3.06464,-11.2011 -3.93043,-16.68463 -3.4841,-22.06677 0.55359,-6.67556 0.73046,-6.5602 -2.6279,-1.71408 -6.03947,8.71497 -8.3989,38.94662 -3.55907,45.60292 0.39991,0.55 1.29257,2.8 1.98369,5 2.56422,8.16247 13.07696,29.99358 16.03243,33.2935 0.84061,0.93858 2.72188,3.7315 4.18062,6.2065 1.45873,2.475 3.55966,5.625 4.66873,7 1.10907,1.375 6.20279,8.0377 11.31939,14.80601 5.11659,6.7683 10.56742,13.9683 12.11296,16 9.17011,12.05462 51.28351,57.93374 52.2716,56.94565 0.22826,-0.22826 -0.66383,-3.07826 -1.98243,-6.33333 z m 145.15076,2.74663 c 13.28967,-13.59104 41.98083,-45.52538 47.93993,-53.35895 1.54554,-2.0317 6.99637,-9.2317 12.11296,-16 5.1166,-6.76831 10.21032,-13.43101 11.31939,-14.80601 1.10907,-1.375 3.21,-4.525 4.66873,-7 1.45874,-2.475 3.34001,-5.26792 4.18062,-6.2065 2.95547,-3.29992 13.46821,-25.13103 16.03243,-33.2935 0.69112,-2.2 1.58378,-4.45 1.98369,-5 4.83983,-6.6563 2.4804,-36.88795 -3.55907,-45.60292 -3.35836,-4.84612 -3.18149,-4.96148 -2.6279,1.71408 0.44633,5.38214 -0.41946,10.86567 -3.4841,22.06677 -7.4485,27.22388 -50.5651,29.68657 -63.02218,3.59964 -2.36682,-4.95647 -3.2945,-4.57669 -3.2945,1.34875 0,6.17972 -5.71963,66.81405 -7.55874,80.13083 -3.51517,25.4531 -11.88674,58.46554 -18.89051,74.49285 -1.19603,2.73699 0.12602,2.08056 4.19925,-2.08504 z M 500.37078,375.29107 c 6.27693,-10.88234 80.27285,-12.8747 86.5477,-2.33032 2.27939,3.83032 2.27939,3.83032 3.71187,-0.16968 9.26021,-25.8579 13.49897,-53.33811 20.43786,-132.5 4.38676,-50.0462 -13.51348,-107.7642 -40.34675,-130.09508 -49.15068,-40.903606 -108.17938,35.94606 -99.92681,130.09508 7.1714,81.81454 11.0507,106.43996 21.14874,134.25 3.81344,10.50226 2.85167,10.41666 8.42739,0.75 z"
+            />
+                           
+          </g>
+                     
+        </svg>
+
+        <h2 class="subtitulo">Estás invitado a los 15 años de</h2>
+        <h1 class="nombre-quinceanera">JULIANA</h1>
+
+        <div class="seccion-bienvenida-magica">
+          <div class="varita-divisor-container">
+            <svg
+              class="varita-horizontal"
+              viewBox="0 0 204.3 53.3"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <g transform="translate(58.9,-94.7)">
+                <path
+                  d="m -54.917593,118.88284 c 1.26284,-0.54562 5.944481,-1.04091 10.403655,-1.10068 16.600634,-0.22249 45.8783424,0.39565 52.7090921,1.11287 5.5123039,0.57879 62.1900349,1.10337 86.0090029,0.79606 6.028223,-0.0778 6.255873,-1.71259 1.02143,-7.33488 -2.447548,-2.6289 -4.39995,-5.30725 -4.338663,-5.95187 0.146111,-1.53687 4.631667,-1.03207 11.781666,1.32588 3.04808,1.00522 6.17777,1.9034 6.95487,1.99598 0.82406,0.0981 3.45947,-2.65862 6.32325,-6.61445 3.22854,-4.459668 5.46112,-6.724954 6.51847,-6.613933 1.93899,0.20359 2.25615,1.450765 2.35909,9.276483 0.0436,3.31514 0.38461,6.70058 0.7578,7.52319 0.44862,0.9889 2.96576,2.10236 7.42892,3.28618 13.66019,3.62328 13.95836,5.06521 1.80428,8.72558 -5.59926,1.68629 -8.47794,3.02332 -8.76853,4.07258 -0.23793,0.85916 -0.29955,4.6379 -0.13693,8.3972 0.23219,5.36781 0.009,7.04896 -1.03881,7.83126 -1.10567,0.82536 -1.5399,0.76375 -2.53249,-0.3592 -0.65891,-0.74545 -3.43439,-3.95558 -6.16775,-7.13361 l -4.96976,-5.77825 -8.49128,2.54849 c -11.895649,3.57023 -13.501218,2.41981 -6.915057,-4.95476 2.052253,-2.29794 3.782835,-4.71931 3.845725,-5.38082 0.150565,-1.58374 -5.11768,-2.12302 -19.056275,-1.95067 -10.342207,0.12788 -13.720086,0.14412 -39.362291,0.18929 -17.945357,0.0316 -25.229071,0.21721 -32.4676704,0.8274 -3.6972095,0.31165 -14.4529491,0.71961 -23.9016436,0.90657 -38.752155,0.76674 -41.744624,0.57006 -41.949585,-2.75723 -0.07602,-1.23421 0.682216,-2.23777 2.179484,-2.88466 z"
+                  fill="#FFD700"
+                  stroke="none"
+                />
+              </g>
+            </svg>
+          </div>
+
+          <div class="parrafo-magico-container">
+            <div class="texto-padres">
+              <h1 class="txt-padres">MIS PADRES</h1>
+            </div>
+            <div class="texto-2">
+              <p class="julio">Julio Pedroza</p>
+              <p class="marinella">Marinella Valderrama</p>
+            </div>
+            <div>
+              <p class="texto-bienvenida-magico">
+                Tienen el gusto de invitarte a celebrar mi fiesta. Despues de XV
+                años de risas, sueños y aprendizajes ha llegado la noche en que
+                mi cuento se trasforma. Quiero que seas parte de esta
+                celebracion tan especial y vivas conmigo una velada inolvidable
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="countdown-section">
+        <h3>Falta muy poco:</h3>
+        <div class="fecha-final">
+          <p>21 de MARZO del 2026</p>
+        </div>
+        <div id="countdown">
+          <div class="time-box">
+            <span id="dias">00</span>
+            <p>Días</p>
+          </div>
+          <div class="time-box">
+            <span id="horas">00</span>
+            <p>Hs</p>
+          </div>
+          <div class="time-box">
+            <span id="minutos">00</span>
+            <p>Min</p>
+          </div>
+          <div class="time-box">
+            <span id="segundos">00</span>
+            <p>Seg</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ubicacion">
+        <i class="fa-solid fa-location-dot icono-seccion"></i>
+        <h2>Lugar Mágico:</h2>
+        <p class="direccion-texto">Finca el Descanso<br /></p>
+
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75718.53496703932!2d-73.61860903854699!3d4.128466767453507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e28cccaecd2d7%3A0xd0fa3239e4f45512!2sHacienda%20El%20Descanso!5e0!3m2!1ses-419!2sco!4v1770685342409!5m2!1ses-419!2sco"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <a
+          href="https://maps.app.goo.gl/A1YYcvRkqheRe5o38"
+          class="btn-llegar"
+          target="_blank"
+          >Ver en Google Maps</a
+        >
+      </section>
+
+      <section class="raspa-gana-section">
+        <h2>Descubre el Mensaje</h2>
+        <p style="color: #00c3ff; font-size: 0.9rem; margin-bottom: 20px">
+          Raspa cada tarjeta para revelar un mensaje
+        </p>
+        <div class="grid-tarjetas">
+          <div class="tarjeta-contenedor">
+            <div class="secreto">
+              Tu compañía es mi mayor regalo. No obstante, si deseas tener un
+              detalle conmigo, contaremos con lluvia de sobres para tu
+              comodidad.
+            </div>
+            <canvas class="canvas-raspar"></canvas>
+          </div>
+
+          <div class="tarjeta-contenedor">
+            <div class="secreto">
+              Protocolo Real: Se reserva el uso de las tonalidades Azules,
+              Plateadas y Blancas para la protagonista de la noche. Agradecemos
+              su comprensión.
+            </div>
+            <canvas class="canvas-raspar"></canvas>
+          </div>
+
+          <div class="tarjeta-contenedor">
+            <div class="secreto">
+              Código de Vestimenta: Traje Formal. Nos encantaría verte lucir con
+              tu mejor gala en esta noche de ensueño.
+            </div>
+            <canvas class="canvas-raspar"></canvas>
+          </div>
+
+          <div class="tarjeta-contenedor">
+            <div class="secreto">
+              Gratitud: Mi felicidad no estaría completa sin tu compañía. Será
+              un honor compartir este inicio de una nueva etapa contigo.
+            </div>
+            <canvas class="canvas-raspar"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="rsvp">
+        <h2>Confirmación</h2>
+        <p>Espero contar con tu presencia en esta noche soñada.</p>
+
+        <a
+          href="javascript:void(0)"
+          id="confirm-btn"
+          class="btn-rsvp"
+          onclick="enviarConfirmacion()"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Confirmar Asistencia
+        </a>
+      </section>
+
+      <footer>
+        <p class="texto-footer">
+          Hecho por Juan Diego Trigos Duran con magia para Juliana Pedroza
+          Valderrama
+        </p>
+      </footer>
+    </main>
+
+    <audio id="musica-fondo" loop>
+      <source src="assets/cancio.mp3" type="audio/mpeg" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <button
+      id="btn-musica"
+      class="music-control oculto"
+      onclick="toggleMusic()"
+    >
+      <i id="icono-musica" class="fas fa-volume-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
