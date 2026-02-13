@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // B. MÚSICA (Con volumen bajo como pediste)
     if (musica) {
-      musica.volume = 0.1;
+      musica.volume = 0.3;
       musica.play().catch((e) => console.warn("Audio no pudo iniciar:", e));
     }
     if (btnMusica) btnMusica.classList.remove("oculto");
