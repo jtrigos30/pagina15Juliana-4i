@@ -973,7 +973,7 @@ main {
   justify-content: center;
   box-sizing: border-box;
   
-  font-size: clamp(11px, 4cqw, 16px); 
+  font-size: clamp(11px, 4cqw, 20px); 
   word-wrap: break-word; /* Rompe palabras largas si es necesario */
 }
 
@@ -1554,3 +1554,4 @@ footer {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
