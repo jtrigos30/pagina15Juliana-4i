@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function initPixie() {
     particles = [];
-    for (let i = 0; i < 80; i++) {
+    for (let i = 0; i < 50; i++) {
       particles.push(new StarParticula());
     }
   }
@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function crearHadasFiesta() {
     hadasFiesta = [];
-    for (let i = 0; i < 20; i++) hadasFiesta.push(new HadaFiesta());
+    for (let i = 0; i < 10; i++) hadasFiesta.push(new HadaFiesta());
   }
 
   function animateParticles() {
@@ -517,9 +517,9 @@ if (seccionMagica && varitaHorizontal && elementosTexto.length > 0) {
 
         letrasSpans.forEach((span, index) => {
           // Ajustamos el retraso a 30ms para que la transición sea más ágil
-          const retraso = index * 45;
+          const retraso = index * 25;
           setTimeout(() => {
-            span.style.animation = "caerPolvillo 1.2s ease-out forwards";
+            span.style.animation = "caerPolvillo 0.5s ease-out forwards";
           }, retraso);
         });
 
@@ -539,7 +539,7 @@ window.addEventListener("resize", () => {
     if (document.querySelector(".canvas-raspar")) {
       inicializarRaspaditas();
     }
-  }, 300);
+  }, 200);
 });
 
 });

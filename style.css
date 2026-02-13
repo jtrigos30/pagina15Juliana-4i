@@ -132,10 +132,10 @@ body {
 
   /* Mantenemos tu animación original y sumamos la levitación al final */
   animation:
-    centrarLibroAbierto 3s cubic-bezier(0.25, 1, 0.5, 1) forwards,
+    centrarLibroAbierto 4.3s cubic-bezier(0.25, 1, 0.5, 1) forwards,
     levitarLibro 4s ease-in-out infinite 3.5s; /* Empieza tras abrirse */
 
-  animation-delay: 0.5s, 3.5s;
+  animation-delay: 2.5s, 6s;
 }
 
 /* --- 2. TAPAS (PORTADA Y CONTRAPORTADA) --- */
@@ -162,8 +162,8 @@ body {
     inset 5px 0 10px rgba(0, 0, 0, 0.5),
     10px 10px 30px rgba(0, 0, 0, 0.6);
 
-  animation: openCover 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  animation-delay: 0.5s;
+  animation: openCover 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 2s;
 }
 
 /* CARAS DE LA PORTADA (Sándwich) */
@@ -303,8 +303,8 @@ body {
   overflow: visible;
 
   /* Termina en -160deg (más levantada) */
-  animation: openPageLeftContent 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  animation-delay: 0.8s;
+  animation: openPageLeftContent 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 2.8s;
 }
 
 /* PAGE 1: RELLENO (Debe quedar DEBAJO) */
@@ -312,8 +312,8 @@ body {
   z-index: 1 !important; /* Prioridad baja */
 
   /* Termina en -178deg (más pegada a la mesa) */
-  animation: openPageLeftFiller 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  animation-delay: 0.7s;
+  animation: openPageLeftFiller 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 2.7s;
 }
 
 /* PÁGINAS DERECHAS (Simetría, estilo simple sin doble cara necesaria visualmente) */
@@ -332,14 +332,14 @@ body {
 
 .page3 {
   z-index: 3;
-  animation: openPageRight1 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  animation-delay: 0.8s;
+  animation: openPageRight1 35 cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 2.8s;
 }
 
 .page4 {
   z-index: 2;
-  animation: openPageRight2 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  animation-delay: 0.9s;
+  animation: openPageRight2 5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: 2.9s;
 }
 
 /* --- ESTILOS PÁGINA 4 (PLAYLIST) --- */
@@ -548,7 +548,7 @@ body {
   margin-top: 20px;
   opacity: 0;
   animation: fadeInControls 1s ease forwards;
-  animation-delay: 2.5s;
+  animation-delay: 4.5s;
 }
 
 .texto-asistentes {
@@ -567,7 +567,7 @@ body {
   /* Animación de entrada */
   opacity: 0;
   animation: fadeInControls 1s ease forwards;
-  animation-delay: 2.5s; /* Aparece después del libro */
+  animation-delay: 5.5s; /* Aparece después del libro */
   position: relative;
 }
 
@@ -591,7 +591,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5px; /* Un poco de margen interno */
+  padding: 0 10px; /* Un poco de margen interno */
   margin: 0 auto; /* Centrado */
   box-shadow: 0 0 25px rgba(240, 237, 230, 0.3); /* Resplandor dorado suave */
   overflow: hidden; /* Para que la burbuja no se salga */
@@ -670,6 +670,12 @@ body {
 }
 #opt-4:checked ~ label[for="opt-4"] {
   color: #150000;
+}
+
+@keyframes fadeInControls {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInControls {
@@ -1072,7 +1078,7 @@ footer {
   stroke: var(--blanco-elegante);
 
   /* IMPORTANTE: Aumentamos el grosor porque el dibujo original es muy grande */
-  stroke-width: 4;
+  stroke-width: 3;
 
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -1082,8 +1088,8 @@ footer {
   stroke-dashoffset: 10000;
 
   animation:
-    dibujarCorona 4s ease-in-out forwards 0.5s,
-    rellenarCorona 1.5s ease forwards 4s;
+    dibujarCorona 2s ease-in-out forwards 0.5s,
+    rellenarCorona 0.5s ease forwards 2s;
 }
 
 /* Efecto de dibujo a mano */
@@ -1142,7 +1148,7 @@ footer {
 /* --- ANIMACIÓN DE BARRIDO (10 SEGUNDOS) --- */
 /* Volvemos a la animación horizontal original que creamos antes */
 .varita-horizontal.activa {
-  animation: varitaBarridoMagico 10s ease-in-out forwards;
+  animation: varitaBarridoMagico 6s ease-in-out forwards;
 }
 
 @keyframes varitaBarridoMagico {
@@ -1413,10 +1419,6 @@ footer {
   justify-content: center;
 }
 
-.julio,.marinella{
-  font-size: 0.8rem;
-}
-
 .book-container {
   margin-bottom: 170px;
 }
@@ -1540,7 +1542,6 @@ footer {
   font-family: "Great Vibes", cursive;
   font-size: 2rem;
 }
-
 
 .texto-padres {
   font-family: "Lobster Two", sans-serif !important;
